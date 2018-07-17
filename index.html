@@ -4,15 +4,20 @@
   </head>
 
   <body>
+      <a-scene>
+        <a-assests>
+          <a-asset-item id="pizza" src="thin_crust_pepperoni_pizza/scene.gltf" ></a-asset-item>
+        </a-assests>
 
-    <a-scene>
-      <a-box position="-1 1 -3" rotation="45 45 45" color="#4CC3D9"></a-box>
-      <a-torus-knot position="0 2.5 -5"radius-inner="1" radius-outer="2" color="yellow"></a-torus-knot>
-      <a-plane position="0 0 -3.5" rotation="-90 0 0" width="4" height="2" color="#7BC8A4"></a-plane>
-      <a-cylinder position="1 0.75 -3" radius="0.25" height="1" color="#F88"></a-cylinder>
-      <a-sky src="https://www.jamesfmackenzie.com/img/posts/equirectangular-pano.png" radius = "20"></a-sky>
+      <a-entity>
+          <a-sky color="black"></a-sky>
+          <a-plane position="0 0 -3.5" rotation="-90 0 0" width="4" height="2" color="white"></a-plane>
+          <a-ring color="teal" position="0 0 -3.5" rotation="-90 0 0" width="4" height="2" ></a-ring>
+      </a-entity>
+
+        <a-entity>
+          <a-gltf-model src="#pizza" visible="true" position="0 0 -3.5" rotation="-90 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
+      </a-entity>
     </a-scene>
-
   </body>
-
 </html>
